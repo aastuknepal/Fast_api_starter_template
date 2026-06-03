@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Enum
-from core.database import Base
+from core.db import Base
 import enum
 
 # Roles for implementing RBAC

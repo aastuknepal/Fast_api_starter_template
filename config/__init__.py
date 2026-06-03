@@ -8,6 +8,11 @@ class Settings(BaseSettings):
     POSTGRES_PORT : str 
     POSTGRES_DB : str
 
+    # JWT Settings
+    SECRET_KEY : str = "your-super-secret-key-here"  # Default for development, should be overridden in .env
+    ALGORITHM : str = "HS256"
+    ACCESS_TOKEN_EXPIRE_MINUTES : int = 30
+
     # This dynamically builds the URL string needed for SQLAlchemy for database connection
     @property
     def DATABASE_URL(self) -> str:

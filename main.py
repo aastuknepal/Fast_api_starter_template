@@ -1,5 +1,5 @@
 from fastapi import FastAPI, APIRouter
-from apps.users.router import router as users_router
+from users.router import router as users_router
 
 app = FastAPI(
     title = "Your Title",
